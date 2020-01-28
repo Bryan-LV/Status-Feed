@@ -5,7 +5,7 @@ const authToken = (req,res,next) => {
   // check if there is a token in the header
   const token = req.header('auth-token');
   if(!token){
-    return res.status(400).json({'Error':'User has not provided token'});
+    return res.status(400).json({error: 'User has not provided token'});
   }
 
   try {
@@ -15,7 +15,7 @@ const authToken = (req,res,next) => {
     next();
 
   } catch (error) {
-    res.status(400).json({'Error': error});
+    res.status(400).json({error: error});
   }
 }
 

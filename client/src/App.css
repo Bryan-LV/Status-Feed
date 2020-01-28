@@ -1,0 +1,174 @@
+*{
+  box-sizing: border-box;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  width:100%;
+}
+
+.footer{
+  text-align: center;
+  padding:15px 0;
+  background-color: #0EBFE9;
+  color:white;
+}
+
+.container{
+  width:92%;
+  max-width:1200px;
+  margin:20px auto;
+  flex:1;
+}
+
+.max-container-5{
+  max-width:500px;
+}
+
+.block{
+  display: block;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  cursor: pointer;
+  text-decoration: none;
+}
+
+p{
+  line-height: 1.4;
+}
+
+.nav{
+  position: relative;
+}
+
+.nav__brand{
+  height:55px;
+  width:55px;
+  margin: 0;
+  border-radius: 50%;
+  border:3px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav, .nav__menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:0 20px;
+  padding:0;
+}
+
+.nav__item{
+  text-decoration: none;
+  padding:0 6px;
+  font-weight: bold;
+}
+
+.nav__link{
+  cursor: pointer;
+}
+
+.nav__link.active{
+  text-decoration: underline;
+}
+
+
+.white-text{
+  color:white;
+}
+.text--center{
+  text-align: center;
+}
+
+.feed-item{
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  padding:14px 20px 20px;
+}
+
+.two-col{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feed__status{
+  flex:2;
+}
+
+.likes{
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.likes__icon{
+  width:18px;
+  cursor: pointer;
+}
+
+.action-btns{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.action__btn{
+  margin:0 6px;
+  cursor: pointer;
+}
+
+.action__icon{
+  width:18px;
+}
+
+.footer__text{
+  padding:8px;
+  margin:0;
+}
+
+.create__status{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.update__modal{
+  display: none;
+  padding-top: 15px;
+}
+
+.update__modal.open{
+  display: block;
+}
+
+.p-2{
+  padding: 10px;
+  padding-bottom: 0px;
+}
+
+
+
+
+@media (min-width:800px){
+  .user__greeting{
+    position: absolute;
+    left:100px;
+  }
+}

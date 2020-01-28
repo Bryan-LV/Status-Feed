@@ -4,7 +4,9 @@
   "description": "User can sign in and add to a newsfeed",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "devserver": "nodemon server.js",
+    "client" : "npm start --prefix client",
+    "dev" : "concurrently \"npm run devserver \" \"npm run client \"  "
   },
   "author": "bryan almaraz",
   "license": "ISC",

@@ -1,10 +1,10 @@
-const CORS = require('cors');
+const cors = require('cors');
 const connectDB = require('./config/db');
 const express = require('express');
 const app = express();
 
 // Middleware
-app.use(CORS());
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
