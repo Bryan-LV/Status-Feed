@@ -6,7 +6,8 @@
   "scripts": {
     "devserver": "nodemon server.js",
     "client" : "npm start --prefix client",
-    "dev" : "concurrently \"npm run devserver \" \"npm run client \"  "
+    "dev" : "concurrently \"npm run devserver \" \"npm run client \"  ",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "bryan almaraz",
   "license": "ISC",
