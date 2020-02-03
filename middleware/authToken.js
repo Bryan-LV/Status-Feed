@@ -1,5 +1,4 @@
 const jwt = require('jsonwebtoken');
-const config = require('config');
 
 const authToken = (req,res,next) => {
   // check if there is a token in the header
@@ -10,7 +9,7 @@ const authToken = (req,res,next) => {
 
   try {
     // verify token has not been tampered with
-    const verifyToken = jwt.verify(token, config.get('jwtSecret'))
+    const verifyToken = jwt.verify(token, process.env.JWT_SECRET)
     req.userID = verifyToken.userID
     next();
 

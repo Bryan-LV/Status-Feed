@@ -3,7 +3,7 @@ const router = express.Router();
 const {check, validationResult} = require('express-validator');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const config = require('config');
+const config = process.env.JWT_SECRET;
 const User = require('../models/User');
 const Status = require('../models/Status');
 const authToken = require('../middleware/authToken');
@@ -45,7 +45,7 @@ router.post('/create',[
       userID: user.id
     }
 
-    jwt.sign(payload, config.get('jwtSecret'), (error, token) => {
+    jwt.sign(payload, config, (error, token) => {
       if(error){
         console.log('jwt error');
         throw error;
@@ -93,7 +93,7 @@ router.post('/login', [
       userID: user.id
     }
 
-    jwt.sign(payload, config.get('jwtSecret'), (error,token) => {
+    jwt.sign(payload, config, (error,token) => {
       if(error){
         throw error;
       }
